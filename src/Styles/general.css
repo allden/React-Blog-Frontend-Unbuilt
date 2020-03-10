@@ -1,0 +1,148 @@
+/* boilerplate */
+:root {
+    --darker-color: rgb(1, 44, 80);
+    --dark-color: rgb(0, 71, 99);
+    --light-color: #fff;
+    --grey-color: #ddd;
+    --primary-color: rgb(2, 147, 167);
+    --complementary: #db653a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial;
+    color: var(--dark-color);
+}
+
+a {
+    color: var(--complementary);
+    text-decoration: none;
+}
+
+h2 {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+h3, h4 {
+    padding: .5rem 1rem;
+}
+
+#root {
+    height: 100vh;
+}
+/* buttons */
+.nav-btn {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    cursor: pointer;
+    transition: background 1s;
+    padding: .5rem 1rem;
+}
+
+.btn:hover {
+    background: var(--darker-color);
+}
+
+.nav-btn:hover {
+    background: var(--darker-color);
+}
+
+/* Headings */
+.large-text {
+    font-size: 2rem;
+}
+
+.medium-text {
+    font-size: 1.5rem;
+}
+
+.content-title {
+    background: var(--primary-color);
+    width: 100%;
+    color: var(--light-color);
+}
+
+.dark-bg {
+    background: var(--dark-color) !important;
+    color: var(--light-color);
+}
+
+.darker-bg {
+    background: var(--darker-color) !important;
+    color: var(--light-color);
+}
+
+.primary-bg {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+/* General Placement */
+#parent {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Padding, Margin */
+.p-1 {
+    padding: 1rem;
+}
+
+.p-1-vertical-half {
+    padding: .5rem 1rem;
+}
+
+.m-b-1 {
+    margin-bottom: 1rem;
+}
+
+/* Text */
+.large-text {
+    font-size: 3rem;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+/* borders */
+
+.r-b-l {
+    border-left: 1px dashed var(--primary-color);
+    border-right: 1px dashed var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+.r-l {
+    border-left: 1px dashed var(--primary-color);
+    border-right: 1px dashed var(--primary-color);
+}
+
+.b {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* misc */
+.margin-toggle {
+    margin-top: 0;
+}

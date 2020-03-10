@@ -1,0 +1,66 @@
+.post-content {
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.limiter {
+    max-height: 300px;
+}
+
+.post-info {
+    margin-bottom: .5rem;
+}
+
+.view {
+    width: 100%;
+}
+
+.posts {
+    width: 70%;
+    padding: 1rem;
+}
+
+.post {
+    margin-bottom: 1rem;
+}
+
+
+.h-align-space-btwn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ud-ops {
+    padding: .5rem 1rem;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    transition: background 1s;
+}
+
+.ud-ops:hover {
+    background: var(--darker-color) !important;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    padding: .5rem 1rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.pagination li:hover {
+    background: var(--dark-color);
+}
+
+.current {
+    background: var(--dark-color) !important;
+}

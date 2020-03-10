@@ -1,0 +1,21 @@
+.title {
+    margin: 0 1rem;
+    color: var(--light-color);
+    padding: .25rem 1rem;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+}
+
+.active li {
+    background: var(--darker-color);
+}

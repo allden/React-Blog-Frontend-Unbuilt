@@ -1,0 +1,14 @@
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.time {
+    opacity: 0.8;
+}
+
+.delete {
+    width: 100%;
+    margin-bottom: 1rem;
+}
