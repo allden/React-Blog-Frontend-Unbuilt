@@ -1,6 +1,6 @@
 Frontend Technologies: HTML, CSS, React
 
-Backend Technologies: MongoDB, Node.js (The frontend and backend are separate, view the following for backend: https://github.com/allden/reimagined-octo-fiesta )
+Backend Technologies: MongoDB, Node.js ( The frontend and backend are separate, view the following for backend: https://github.com/allden/reimagined-octo-fiesta )
 
 Frameworks: Express, Mongoose
 
