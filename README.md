@@ -1,3 +1,5 @@
+All of the JS code can be found in the "src" folder. 
+
 Frontend Technologies: HTML, CSS, React, JS
 
 Backend Technologies: MongoDB, Node.js ( The frontend and backend are separate, view the following for backend: https://github.com/allden/reimagined-octo-fiesta )
