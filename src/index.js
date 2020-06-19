@@ -198,6 +198,8 @@ class Blog extends Component {
                             >
                             </Container>)
                         }}></Route>
+                        <Route exact path="/react-blog" render={() => <Redirect to="/"></Redirect>}></Route>
+                        <Route exact path="/React-Blog-Frontend-Unbuilt" render={() => <Redirect to="/"></Redirect>}></Route>
                         <Route exact path="/register" render={(prevProps) => this.state.signedIn ? <RegisterForm {...prevProps}/> : <Redirect to="/"></Redirect>}></Route>
                         <Route exact path="/login" render={(prevProps) => <LoginForm toggleLoginState={this.toggleLoginState} {...prevProps}></LoginForm>}></Route>
                         <Route exact path="/logout" render={(prevProps) => this.state.signedIn ? <LogOut toggleLoginState={this.toggleLoginState} {...prevProps}></LogOut> : <Redirect to="/"></Redirect>}></Route>
