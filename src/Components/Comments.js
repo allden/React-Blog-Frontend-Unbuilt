@@ -71,7 +71,6 @@ class Comments extends React.Component {
         };
 
         if(jwt) {
-            console.log(`https://top-blog-backend.herokuapp.com/posts/${this.props.match.params.id}/comments/${id}`)
             fetch(`https://top-blog-backend.herokuapp.com/posts/${this.props.match.params.id}/comments/${id}`, opts)
             .then(res => res.json())
             .then(data => {

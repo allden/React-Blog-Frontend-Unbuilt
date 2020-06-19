@@ -44,7 +44,6 @@ class Blog extends Component {
         fetch(`https://top-blog-backend.herokuapp.com/posts/?search=${search}`)
         .then(response => response.json())
         .then(data => {
-            console.log('POSTS', data)
             this.setState({
                 posts: data.posts,
                 message

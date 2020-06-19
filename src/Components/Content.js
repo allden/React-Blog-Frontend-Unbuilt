@@ -22,7 +22,6 @@ function Content(props) {
 };
 
 function Posts(props) {
-    console.log(props);
     let filtered = props.posts.filter(post => {
         if(props.signedIn) {
             return true
