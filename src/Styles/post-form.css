@@ -17,7 +17,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--complementary);
 }
 
 input:invalid, textarea:invalid {
@@ -31,8 +31,7 @@ input:invalid, textarea:invalid {
 }
 
 .center-container {
-    height: 100vh;
-    width: 100vw;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +45,7 @@ input:invalid, textarea:invalid {
 .alert {
     padding: .5rem 1rem;
     color: var(--light-color);
-    background: var(--complementary);
+    background: var(--darker-color);
     position: fixed;
     top: 10vh;
     z-index: 999;

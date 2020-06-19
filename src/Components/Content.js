@@ -1,10 +1,12 @@
 import React from 'react';
 import CreateForm from './CreateForm';
 import {Link} from 'react-router-dom';
+import About from './About';
 
 function Content(props) {
     return (
         <div id="content">
+            <About signedIn={props.signedIn} message={props.message}/>
             <Posts 
                 signedIn={props.signedIn}
                 posts={props.posts} 
@@ -15,24 +17,12 @@ function Content(props) {
                 page={props.page}
                 changePage={props.changePage}
             />
-            <About signedIn={props.signedIn}/>
         </div>
     );
 };
 
-function About(props) {
-    const message = props.signedIn === true ? <p className="r-b-l p-1">Welcome to the blog! You are currently an administrator.</p> : <p className="r-b-l p-1">This is the visitor view of the page. <br></br> To login, visit this page: <Link to="/login">Login</Link><br></br>Username: admin@example.com<br></br>Password: admin!</p>;
-    return (
-        <section id="about">
-            <div className="content-title dark-bg">
-                <h4>About the blog:</h4>
-            </div>
-            {message}
-        </section>
-    );
-};
-
 function Posts(props) {
+    console.log(props);
     let filtered = props.posts.filter(post => {
         if(props.signedIn) {
             return true
@@ -50,7 +40,7 @@ function Posts(props) {
             </div>
             <div className="post-content r-l limiter">
                 <div className="post-info">
-                    <p className="primary-color">By {post.author}</p>
+                    <p className="complement-color">By {post.author}</p>
                 </div>
                 <p>{post.content}</p>
             </div>
@@ -59,10 +49,10 @@ function Posts(props) {
                     <div className="ud-bar">
                         {
                             post.published ? 
-                            <button onClick={() => props.togglePublish(post._id, post.published)} className="ud-ops dark-bg">Unpublish</button> 
-                            : <button onClick={() => props.togglePublish(post._id, post.published)} className="ud-ops dark-bg">Publish</button>
+                            <button onClick={() => props.togglePublish(post._id, post.published)} className="ud-ops complement-bg">Unpublish</button> 
+                            : <button onClick={() => props.togglePublish(post._id, post.published)} className="ud-ops complement-bg">Publish</button>
                         }
-                        <button className="ud-ops dark-bg" onClick={() => props.deleteHandler(post._id)}>Delete</button>
+                        <button className="ud-ops complement-bg" onClick={() => props.deleteHandler(post._id)}>Delete</button>
                     </div>
                     <Link to={"/posts/" + post._id}><button className="btn view">View</button></Link>
                 </div>

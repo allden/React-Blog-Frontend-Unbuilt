@@ -3,8 +3,8 @@ import Alert from './Alert';
 
 class LoginForm extends React.Component {
     state = {
-        username: '',
-        password: '',
+        username: 'admin@example.com',
+        password: 'admin!',
         statusMessage: ''
     };
 

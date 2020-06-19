@@ -1,5 +1,5 @@
 import React from 'react';
-import {About} from './Content.js';
+import About from './About';
 import Comments from './Comments';
 
 class Post extends React.Component {
@@ -24,6 +24,7 @@ class Post extends React.Component {
         return (
             <div id="container">
                 <div id="content">
+                    <About signedIn={this.props.signedIn}/>
                     <div className="posts">
                         <div key={this.state.post._id} className="post margin-toggle">
                             <div className="content-title">
@@ -31,14 +32,13 @@ class Post extends React.Component {
                             </div>
                             <div className="post-content r-b-l">
                                 <div className="post-info">
-                                    <p className="primary-color">By {this.state.post.author}</p>
+                                    <p className="complement-color">By {this.state.post.author}</p>
                                 </div>
                                 <p>{this.state.post.content}</p>
                             </div>
                         </div>
                         <Comments {...this.props}/>
                     </div>
-                    <About />
                 </div>
             </div>
         );

@@ -12,3 +12,8 @@
     width: 100%;
     margin-bottom: 1rem;
 }
+
+.comment {
+    background: var(--primary-color);
+    color: var(--light-color);
+}

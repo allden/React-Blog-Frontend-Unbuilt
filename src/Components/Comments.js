@@ -101,11 +101,15 @@ class Comments extends React.Component {
             return (
                 <Comment signedIn={this.props.signedIn} key={comment._id} id={comment._id} deleteComment={this.deleteComment} time={comment.timeOfCreation} name={comment.postedBy} content={comment.content} />
             );
-        }) : <p className="centered-text">There are no comments yet.</p>;
+        }) : (
+            <div className="primary-bg light-color p-1">
+                <p className="centered-text">There are no comments yet.</p>
+            </div>
+        );
 
         return (
             <div id="comments">
-                <h2 className="primary-color">Comments</h2>
+                <h2 className="primary-color centered-text">Comments</h2>
                 {message}
                 <CommentForm postComment={this.postComment}/>
                 {commentElements}
@@ -120,7 +124,7 @@ function Comment(props) {
             <div className="comment-content p-1 r-l">
                 <p>{props.content}</p>
             </div>
-            <button onClick={() => props.deleteComment(props.id)} className="btn delete">Delete</button>
+            <button onClick={() => props.deleteComment(props.id)} className="btn delete m-0">Delete</button>
         </div>
     ) : (
         <div className="comment-content p-1 r-b-l m-b-1">

@@ -15,7 +15,7 @@ class LogOut extends React.Component {
 
     render() {
         return (
-            <div className="center-container">
+            <div className="center-container primary-color">
                 <h2 className="large-text centered-text">You have been logged out.</h2>
                 <p className="centered-text">Redirecting...</p>
             </div>

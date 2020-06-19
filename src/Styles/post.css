@@ -1,6 +1,8 @@
 .post-content {
     padding: 1rem;
     overflow: hidden;
+    background: var(--primary-color);
+    color: var(--light-color);
 }
 
 .limiter {
@@ -13,11 +15,6 @@
 
 .view {
     width: 100%;
-}
-
-.posts {
-    width: 70%;
-    padding: 1rem;
 }
 
 .post {

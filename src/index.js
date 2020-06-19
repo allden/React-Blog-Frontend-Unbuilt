@@ -39,13 +39,14 @@ class Blog extends Component {
         this.toggleLoginState();
     };
 
-    async fetchPosts(message = '') {
+    fetchPosts(message = '') {
         const {search} = this.state;
-        await fetch(`https://top-blog-backend.herokuapp.com/posts/?search=${search}`)
+        fetch(`https://top-blog-backend.herokuapp.com/posts/?search=${search}`)
         .then(response => response.json())
         .then(data => {
+            console.log('POSTS', data)
             this.setState({
-                posts: data,
+                posts: data.posts,
                 message
             });
         })
@@ -54,7 +55,7 @@ class Blog extends Component {
     
     toggleLoginState = () => {
         const jwt = localStorage.getItem('jwt');
-        if(jwt !== '') {
+        if(jwt && jwt !== '') {
             this.setState({
                 signedIn: true,
                 page: 0

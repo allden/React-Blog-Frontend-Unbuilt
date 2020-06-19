@@ -1,11 +1,11 @@
 /* boilerplate */
 :root {
-    --darker-color: rgb(1, 44, 80);
-    --dark-color: rgb(0, 71, 99);
-    --light-color: #fff;
-    --grey-color: #ddd;
-    --primary-color: rgb(2, 147, 167);
-    --complementary: #db653a;
+    --darker-color: #ff916f;
+    --dark-color: #474061;
+    --light-color: #f5f4f8;
+    --grey-color: #d9d7e0;
+    --primary-color: #5d5878;
+    --complementary: #f7b773;
 }
 
 * {
@@ -16,7 +16,7 @@
 
 body {
     font-family: 'Roboto', Arial;
-    color: var(--dark-color);
+    background: var(--grey-color);
 }
 
 a {
@@ -38,7 +38,7 @@ h3, h4 {
 }
 /* buttons */
 .nav-btn {
-    background: var(--dark-color);
+    background: var(--complementary);
     color: var(--light-color);
     padding: 1rem;
     cursor: pointer;
@@ -46,7 +46,7 @@ h3, h4 {
 }
 
 .btn {
-    background: var(--dark-color);
+    background: var(--complementary);
     color: var(--light-color);
     border: none;
     cursor: pointer;
@@ -72,7 +72,7 @@ h3, h4 {
 }
 
 .content-title {
-    background: var(--primary-color);
+    background: var(--dark-color);
     width: 100%;
     color: var(--light-color);
 }
@@ -92,15 +92,29 @@ h3, h4 {
     color: var(--light-color);
 }
 
+.complement-bg {
+    background: var(--complementary);
+    color: var(--light-color);
+}
+
 .primary-color {
     color: var(--primary-color);
+}
+
+.complement-color {
+    color: var(--complementary);
+}
+
+.light-color {
+    color: var(--light-color);
 }
 
 /* General Placement */
 #parent {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
+    height: 100%;
 }
 
 /* Padding, Margin */
@@ -116,6 +130,14 @@ h3, h4 {
     margin-bottom: 1rem;
 }
 
+.m-l-1 {
+    margin-left: 1rem;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
 /* Text */
 .large-text {
     font-size: 3rem;
@@ -128,21 +150,25 @@ h3, h4 {
 /* borders */
 
 .r-b-l {
-    border-left: 1px dashed var(--primary-color);
-    border-right: 1px dashed var(--primary-color);
-    border-bottom: 1px dashed var(--primary-color);
+    border-left: 1px dashed var(--dark-color);
+    border-right: 1px dashed var(--dark-color);
+    border-bottom: 1px dashed var(--dark-color);
 }
 
 .r-l {
-    border-left: 1px dashed var(--primary-color);
-    border-right: 1px dashed var(--primary-color);
+    border-left: 1px dashed var(--dark-color);
+    border-right: 1px dashed var(--dark-color);
 }
 
 .b {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--dark-color);
 }
 
 /* misc */
 .margin-toggle {
     margin-top: 0;
+}
+
+.mobile {
+    display: none;
 }

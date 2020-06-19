@@ -3,14 +3,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 60vw;
     align-self: center;
-    min-height: 90vh;
+    width: 80vw;
+    flex-grow: 1;
 }
 
 #content {
-    display: flex;
     width: 100%;
+    padding: 1rem;
 }
 
 .container-alert-box {
